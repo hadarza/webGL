@@ -7,6 +7,39 @@
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="manifest" href="manifest.webmanifest">
+    <style>
+      body {
+        overflow: hidden;
+      }
+
+      canvas {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      @media (orientation: portrait) {
+        body {
+          transform: rotate(90deg);
+          transform-origin: top left;
+          width: 100vh;
+          height: 100vw;
+          overflow-x: hidden;
+          overflow-y: scroll;
+          position: fixed;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+        }
+
+        canvas {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    </style>
+  
   </head>
   <body>
     <div id="unity-container">
